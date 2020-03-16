@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15840390244910" configfile="/jsfPrimefaces/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15840390244910" configfile="/jsfPrimefaces/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15843497950763" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15843497950764 pf15843498727975" inlinks="pf15843497950764" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="count.xhtml" id="pf15843498727976" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15843498727975" path="count.xhtml"/>
+  <links id="pf15843497950764" target="pf15843497950763" source="pf15843497950763" outcome="false" fromaction="#{counterBean.findMarios}"/>
+  <links id="pf15843498727975" target="pf15843498727976" source="pf15843497950763" outcome="true" fromaction="#{counterBean.findMarios}"/>
+</pageflow:Pageflow>

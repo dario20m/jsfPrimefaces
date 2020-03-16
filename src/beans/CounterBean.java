@@ -4,21 +4,22 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 @ManagedBean
 public class CounterBean {
 
-	@Autowired
-	private PersonaRepository repo;
-	private List<Persona> countList;
+	private List<Object> countList;
 
-	public void findMarios() {
-		countList = repo.findbyName("Mario");
+	public boolean findMarios() {
+		try {
+			//countList = repo.findbyName("Mario");
+		} catch (NullPointerException e) {
+			return false;
+		}
+		return countList != null;
 	}
 
 	public int count() {
-		return 0;
 		//return countList.size();
+		return 0;
 	}
 }
