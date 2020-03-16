@@ -10,8 +10,7 @@
 </h:head>
 
 <h:body>
-	<ui:debug hotkey="x"
-		rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
+	<ui:debug hotkey="x" />
 
 	<div id="header">
 		<ui:insert name="header">
@@ -22,7 +21,7 @@
 	<div id="content">
 		<ui:insert name="content">
 			<h:form>
-				<p:commandButton value="count Marios" ajax="false" action="count" />
+				<p:commandButton value="count Marios" ajax="false" action="#{counterBean.changePage()}" />
 			</h:form>
 		</ui:insert>
 	</div>

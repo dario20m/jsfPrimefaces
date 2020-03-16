@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15840390244910" configfile="/jsfPrimefaces/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15840390244910" configfile="/jsfPrimefaces/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15843487252310" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15843487252311" path="index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="count.xhtml" id="pf15843487252312" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15843487252311" path="count.xhtml"/>
+  <links id="pf15843487252311" target="pf15843487252312" source="pf15843487252310" outcome="count" fromaction="#{counterBean.changePage}"/>
+</pageflow:Pageflow>

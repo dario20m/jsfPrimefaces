@@ -13,12 +13,17 @@ public class CounterBean {
 	private PersonaRepository repo;
 	private List<Persona> countList;
 
-	public void findMarios() {
+	public boolean findMarios() {
 		countList = repo.findbyName("Mario");
+		return countList != null;
 	}
 
 	public int count() {
 		return 0;
-		//return countList.size();
+		// return countList.size();
+	}
+
+	public String changePage() {
+		return "count";
 	}
 }
