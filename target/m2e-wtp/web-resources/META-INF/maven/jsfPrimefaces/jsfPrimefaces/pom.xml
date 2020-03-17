@@ -26,12 +26,20 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.2</version>
 		</dependency>
-		
+
+		<!-- spring context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>5.2.4.RELEASE</version>
 		</dependency>
+
+		<!-- spring core -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-core</artifactId> -->
+		<!-- <version>5.2.4.RELEASE</version> -->
+		<!-- </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
