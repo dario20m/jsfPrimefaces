@@ -7,11 +7,12 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class CounterBean {
 
-	private List<Object> countList;
+	private List<Persona> countList;
+	private PersonaService s;
 
 	public boolean findMarios() {
 		try {
-			//countList = repo.findbyName("Mario");
+			countList = s.getByName("Mario");
 		} catch (NullPointerException e) {
 			return false;
 		}
@@ -19,7 +20,6 @@ public class CounterBean {
 	}
 
 	public int count() {
-		//return countList.size();
-		return 0;
+		return countList.size();
 	}
 }

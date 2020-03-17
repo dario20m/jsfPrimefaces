@@ -1,3 +1,2 @@
 beans\CounterBean.class
-beans\Persona.class
-beans\PersonaRepository.class
+beans\Service.class
