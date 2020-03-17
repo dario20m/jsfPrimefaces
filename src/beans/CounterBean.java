@@ -11,11 +11,8 @@ public class CounterBean {
 	private PersonaService s;
 
 	public boolean findMarios() {
-		try {
-			countList = s.getByName("Mario");
-		} catch (NullPointerException e) {
-			return false;
-		}
+		countList = s.getByName("Mario");
+		System.out.println(countList.toString());
 		return countList != null;
 	}
 

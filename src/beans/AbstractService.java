@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
-@Component
 public abstract class AbstractService {
 
 	/**
@@ -19,7 +17,7 @@ public abstract class AbstractService {
 	 */
 	@Autowired
 	@Qualifier("DataSource")
-	private transient DataSource dataSource;
+	private DataSource dataSource;
 
 	/**
 	 * Costruttore.
@@ -48,7 +46,7 @@ public abstract class AbstractService {
 		if (inTransactionActive) {
 		    // Le operazioni sul DB sono impostate in maniera sequenziale
 		    // (No accessi simultanei)
-		    connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+		    //connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 		    // Auto-commit disabilitato
 		    connection.setAutoCommit(false);
 		}
