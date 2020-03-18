@@ -21,7 +21,8 @@
 	<div id="content">
 		<ui:insert name="content">
 			<h:form>
-				<p:commandButton value="count Marios" ajax="false" action="#{controllerBean.changePage}" />
+				<p:commandLink value="count Marios" ajax="false" action="#{controllerBean.setResultList}" />
+				<div class="box">#{controllerBean.resultList}</div>
 			</h:form>
 		</ui:insert>
 	</div>

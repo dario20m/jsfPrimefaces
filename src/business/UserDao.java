@@ -27,8 +27,30 @@ public class UserDao {
 				usersList.add(u);
 			}
 		} catch (SQLException e) {
+		} finally {
+			closeStatement(ps, rs);
 		}
 
 		return usersList;
+	}
+
+	//TODO: Move this method in a utility class
+	private void closeStatement(final PreparedStatement ps, final ResultSet rs) {
+		if (rs != null) {
+			try {
+				if (!rs.isClosed())
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (ps != null) {
+			try {
+				if (!ps.isClosed())
+					ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

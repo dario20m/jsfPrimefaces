@@ -15,12 +15,11 @@ public class UserSRV {
 	@Autowired
 	@Qualifier("DataSource")
 	private DataSource dataSource;
-	Connection conn;
+	Connection conn = null;
 	List<User> usersList;
 	UserDao userD;
 
 	public List<User> getByUsername(String username) {
-		conn = null;
 		try {
 			conn = dataSource.getConnection();
 
