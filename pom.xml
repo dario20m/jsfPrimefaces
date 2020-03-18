@@ -8,6 +8,7 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+
 		<!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -34,20 +35,13 @@
 			<version>5.2.4.RELEASE</version>
 		</dependency>
 
-		<!-- spring core -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-core</artifactId> -->
-		<!-- <version>5.2.4.RELEASE</version> -->
-		<!-- </dependency> -->
-
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.16</version>
 		</dependency>
-		
+
 		<!-- This dependency solves a tomcat7 issue i was facing -->
 	</dependencies>
 

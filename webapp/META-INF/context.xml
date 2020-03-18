@@ -3,8 +3,4 @@
 		type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
 		url="jdbc:mysql:/localhost:3306/mariosdb" maxActive="15"
 		username="root" password="root" maxIdle="3" />
-		
-		
-		<jee:jndi-lookup id="DataSource" jndi-name="jdbc/RedWebDS" expected-type="javax.sql.DataSource"/>
-		<context:component-scan base-package="business"/>
 </Context>
