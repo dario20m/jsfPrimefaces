@@ -1,2 +1,37 @@
 /build/
 /target/
+#JAVA files to ignore
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+#Maven files to ignore
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# STS (Spring Tool Suite)
+.springBeans
+# Locally stored "Eclipse launch configurations"
+*.launch
+#Others
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
