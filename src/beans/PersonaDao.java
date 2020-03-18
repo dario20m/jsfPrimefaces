@@ -25,7 +25,7 @@ public class PersonaDao {
 				nameLow = name.toLowerCase();
 
 			StringBuilder sb = new StringBuilder();
-			sb.append("select * from persona where persona.nome = ").append(name);
+			sb.append("select * from persona where persona.nome = ").append(nameLow);
 			String query = sb.toString();
 
 			ps = connection.prepareStatement(query);
