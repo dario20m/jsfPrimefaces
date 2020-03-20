@@ -1,6 +1,0 @@
-<Context>
-	<Resource name="jdbc/mariosdb" auth="Container"
-		type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql:/localhost:3306/mariosdb" maxActive="15"
-		username="root" password="root" maxIdle="3" />
-</Context>

@@ -5,15 +5,13 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 @ManagedBean
-@Component
 public class ControllerBean {
 
-	@Autowired
-	private UserSRV userService;
-	
+	// FIXME: This service should be injected instead
+//	@Autowired
+	private UserSRV userService = new UserSRV();
 	private List<User> resultList = new ArrayList<>();
 
 	public ControllerBean() {
