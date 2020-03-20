@@ -15,6 +15,10 @@ public class PersonaService extends AbstractService {
 	@Autowired
 	private PersonaDao personaDao;
 	
+	public PersonaService() {
+		super();
+	}
+
 	public final List<Persona> getByName(final String name) {
 		List<Persona> output = null;
 		Connection connection = null;
@@ -29,4 +33,11 @@ public class PersonaService extends AbstractService {
 		return output;
 	}
 
+	public PersonaDao getPersonaDao() {
+		return personaDao;
+	}
+
+	public void setPersonaDao(PersonaDao personaDao) {
+		this.personaDao = personaDao;
+	}
 }

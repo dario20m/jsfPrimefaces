@@ -14,6 +14,8 @@ public class PersonaDao {
 
 	List<Persona> result = new ArrayList<>();
 
+	public PersonaDao() {}
+
 	public List<Persona> getByName(String name, Connection connection) {
 		PreparedStatement ps = null;
 		ResultSet rs = null;

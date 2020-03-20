@@ -31,8 +31,11 @@ public abstract class AbstractService {
 		return dataSource;
 	}
 
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
 	/**
-	 * 
 	 * Setup della connessione.
 	 * 
 	 * @param connection			connessione da gestire
@@ -50,74 +53,4 @@ public abstract class AbstractService {
 		}
 		return connection;
 	}
-	
-	/**
-	 * 
-	 * Chiude la connessione al DB, in maniera safe.
-	 *
-	 * @param connection
-	 *            - Connessione al DB
-	 */
-	public final void closeConnection(final Connection connection) {
-		try {
-			if (connection != null && !connection.isClosed()) {
-				connection.close();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Chiude la transazione al DB.
-	 *
-	 * @param connection
-	 *            - Connessione al DB
-	 */
-	public final void closeTransaction(final Connection connection) {
-		try {
-			if (connection != null && !connection.isClosed()) {
-				// salvataggio dati
-				connection.commit();
-				// Auto-commit attivato
-				connection.setAutoCommit(true);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Commit e chiusura della connessione al DB.
-	 *
-	 * @param connection
-	 *            - Connessione al DB
-	 * @throws SQLException
-	 *             the SQL exception
-	 */
-	public final void commitConnection(final Connection connection) throws SQLException {
-		try {
-			if (connection != null && !connection.isClosed()) {
-				// Salvataggio dei dati su DB
-				connection.commit();
-			}
-		} finally {
-			closeConnection(connection);
-		}
-	}
-	
-	/** 
-	 * Rollback e chiusura della connessione al DB. 
-	 * @param connection - Connessione al DB
-	 */
-	public final void rollbackConnection(final Connection connection) {
-		try {
-			if (connection != null && !connection.isClosed()) {
-				connection.rollback();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
 }
