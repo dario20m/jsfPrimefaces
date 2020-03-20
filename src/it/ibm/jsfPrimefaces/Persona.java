@@ -1,4 +1,4 @@
-package beans;
+package it.ibm.jsfPrimefaces;
 
 import java.sql.Date;
 

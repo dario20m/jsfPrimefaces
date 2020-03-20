@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+	<context:annotation-config />
+	<context:component-scan base-package="it.ibm.jsfPrimefaces" />
+</Context>
