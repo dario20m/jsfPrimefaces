@@ -3,14 +3,15 @@ package business;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
-import javax.annotation.Resource;
 import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserSRV {
 
-	@Resource(name = "jdbc/mariosdb")
+	@Autowired
 	private DataSource dataSource;
 
 	// FIXME: The Dao should be injected
@@ -25,7 +26,6 @@ public class UserSRV {
 			System.out.println("Connessione in corso...");
 			conn = dataSource.getConnection();
 			System.out.println("Connessione al DB avvenuta con successo!");
-
 			usersList = userD.getByUsername(username, conn);
 		} catch (SQLException e) {
 			System.out.println("Errore nella creazione della connessione");
