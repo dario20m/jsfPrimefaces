@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserSRV {
 
-	@Autowired
+	//FIXME: This resource should be injected
 	private DataSource dataSource;
 
-	// FIXME: The Dao should be injected
-	UserDao userD;
+	//FIXME: The Dao should be injected
+	UserDao userD = new UserDao();
 
 	Connection conn = null;
 	List<User> usersList;
@@ -24,9 +24,11 @@ public class UserSRV {
 
 		try {
 			System.out.println("Connessione in corso...");
+			dataSource = ConfigurationClass.getDataSource();
 			conn = dataSource.getConnection();
+			System.out.println("Connection: "+conn + "   DataSource: " + dataSource);
 			System.out.println("Connessione al DB avvenuta con successo!");
-			usersList = userD.getByUsername(username, conn);
+			usersList = userD.getByUsername("Mario", conn);
 		} catch (SQLException e) {
 			System.out.println("Errore nella creazione della connessione");
 			e.printStackTrace();

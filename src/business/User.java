@@ -42,6 +42,21 @@ public class User {
 		this.cognome = cognome;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("User [id=");
+		builder.append(id);
+		builder.append(", nome=");
+		builder.append(nome);
+		builder.append(", cognome=");
+		builder.append(cognome);
+		builder.append(", datanascita=");
+		builder.append(datanascita);
+		builder.append("]\n");
+		return builder.toString();
+	}
+
 	public Date getDatanascita() {
 		return datanascita;
 	}
