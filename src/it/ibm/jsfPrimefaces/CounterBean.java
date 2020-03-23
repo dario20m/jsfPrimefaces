@@ -2,23 +2,21 @@ package it.ibm.jsfPrimefaces;
 
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@ManagedBean
 @Component
 public class CounterBean {
 
 	private List<Persona> countList;
 	@Autowired
-	private PersonaService service;
+	private PersonaService personaService;
 	
 	public CounterBean() {}
 
 	public boolean findMarios() {
-		countList = service.getByName("Mario");
+		countList = personaService.getByName("Mario");
 		System.out.println(countList.toString());
 		return countList != null;
 	}
@@ -35,11 +33,11 @@ public class CounterBean {
 		this.countList = countList;
 	}
 
-	public PersonaService getService() {
-		return service;
+	public PersonaService getPersonaService() {
+		return personaService;
 	}
 
-	public void setService(PersonaService s) {
-		this.service = s;
+	public void setPersonaService(PersonaService personaService) {
+		this.personaService = personaService;
 	}
 }

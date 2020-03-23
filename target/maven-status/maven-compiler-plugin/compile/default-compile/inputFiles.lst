@@ -1,2 +1,6 @@
-D:\workspace\jsfPrimefaces\src\beans\Service.java
-D:\workspace\jsfPrimefaces\src\beans\CounterBean.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\CounterBean.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\Persona.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\PersonaService.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\AbstractService.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\PersonaDao.java
+D:\workspace\jsfPrimefaces\src\it\ibm\jsfPrimefaces\ApplicationInitializer.java

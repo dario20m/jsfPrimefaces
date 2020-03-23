@@ -1,2 +1,6 @@
-beans\CounterBean.class
-beans\Service.class
+it\ibm\jsfPrimefaces\AbstractService.class
+it\ibm\jsfPrimefaces\Persona.class
+it\ibm\jsfPrimefaces\CounterBean.class
+it\ibm\jsfPrimefaces\PersonaDao.class
+it\ibm\jsfPrimefaces\ApplicationInitializer.class
+it\ibm\jsfPrimefaces\PersonaService.class

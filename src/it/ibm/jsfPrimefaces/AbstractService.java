@@ -7,7 +7,9 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public abstract class AbstractService {
 
 	/**
@@ -39,18 +41,11 @@ public abstract class AbstractService {
 	 * Setup della connessione.
 	 * 
 	 * @param connection			connessione da gestire
-	 * @param inTransactionActive	flag transazione attiva
 	 * @return						connessione creata
 	 * @throws SQLException			eccezione generabile in fase di setup
 	 */
-	protected final Connection setupConnection(final Connection connection, final Boolean inTransactionActive) throws SQLException {
-		if (inTransactionActive) {
-		    // Le operazioni sul DB sono impostate in maniera sequenziale
-		    // (No accessi simultanei)
-		    //connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-		    // Auto-commit disabilitato
-		    connection.setAutoCommit(false);
-		}
+	protected final Connection setupConnection(final Connection connection) throws SQLException {
+		//TODO ?
 		return connection;
 	}
 }

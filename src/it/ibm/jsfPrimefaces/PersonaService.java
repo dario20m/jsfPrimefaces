@@ -5,11 +5,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-@Component
 public class PersonaService extends AbstractService {
 	
 	@Autowired
@@ -24,12 +22,9 @@ public class PersonaService extends AbstractService {
 		Connection connection = null;
 		
 		try {
-			connection = setupConnection(getDataSource().getConnection(), false);
+			connection = setupConnection(getDataSource().getConnection());
 			output = personaDao.getByName(name, connection);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} catch (SQLException e) { e.printStackTrace(); }
 		return output;
 	}
 
