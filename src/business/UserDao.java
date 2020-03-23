@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class UserDao {
+public class UserDao implements IUserDao{
+	@Override
 	public List<User> getByUsername(String username, Connection conn) {
 		List<User> usersList = new ArrayList<>();
 		PreparedStatement ps = null;

@@ -7,11 +7,10 @@ import org.springframework.stereotype.Service;
 
 import business.utility.ConnectionUtils;
 
-@Service
 public class UserSRV {
 
 	// FIXME: The Dao should be injected
-	UserDao userD = new UserDao();
+	IUserDao userD = new UserDao();
 
 	Connection conn = null;
 	List<User> usersList;
