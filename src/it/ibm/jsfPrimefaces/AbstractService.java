@@ -45,7 +45,6 @@ public abstract class AbstractService {
 	 * @throws SQLException			eccezione generabile in fase di setup
 	 */
 	protected final Connection setupConnection(final Connection connection) throws SQLException {
-		//TODO ?
 		return connection;
 	}
 }

@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -28,7 +27,7 @@ public class PersonaDao {
 				nameLow = name.toLowerCase();
 
 			StringBuilder sb = new StringBuilder();
-			sb.append("select * from persona where persona.nome = ").append(nameLow);
+			sb.append("select * from persona where persona.nome = '").append(nameLow).append("';");
 			String query = sb.toString();
 
 			ps = connection.prepareStatement(query);

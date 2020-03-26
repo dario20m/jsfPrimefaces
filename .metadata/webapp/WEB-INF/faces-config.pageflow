@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15840390244910" configfile="/jsfPrimefaces/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15843497950763" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15847049263820 pf15847049263821" inlinks="pf15847049263820" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="count.xhtml" id="pf15847049263822" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15847049263821" path="/count.xhtml"/>
-  <links id="pf15847049263820" target="pf15843497950763" source="pf15843497950763" outcome="false" fromaction="#{counterBean.findMarios}"/>
-  <links id="pf15847049263821" target="pf15847049263822" source="pf15843497950763" outcome="true" fromaction="#{counterBean.findMarios}"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15843497950763" referenceLink="//@navigationRule.0/@fromViewId|" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="count.xhtml" id="pf15847049263822" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="/count.xhtml"/>
 </pageflow:Pageflow>
