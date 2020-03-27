@@ -11,21 +11,4 @@
 		<message-bundle>resources.application</message-bundle>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>
-
-	<navigation-rule>
-		<from-view-id>/index.xhtml</from-view-id>
-
-		<navigation-case>
-			<from-action>#{counterBean.findMarios}</from-action>
-			<from-outcome>false</from-outcome>
-			<to-view-id>/index.xhtml</to-view-id>
-		</navigation-case>
-
-		<navigation-case>
-			<from-action>#{counterBean.findMarios}</from-action>
-			<from-outcome>true</from-outcome>
-			<to-view-id>/count.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-
 </faces-config>

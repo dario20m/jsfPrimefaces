@@ -8,24 +8,35 @@
 
 <h:head>
 	<title><ui:insert name="title">Primefaces Button</ui:insert></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </h:head>
 
 <h:body>
 
 	<div id="header">
 		<ui:insert name="header">
-		<h1>OCCURENCES COUNTED</h1>
+			<h1>OCCURENCES COUNTED</h1>
 		</ui:insert>
 	</div>
 
 	<div id="content">
-		<ui:insert name="content">
-			<div class="p-grid">
-				<div class="p-col" >
-					<div class="box">#{counterBean.count()}</div>
-				</div>
-			</div>
-		</ui:insert>
+		<h:form>
+			<p:commandButton value="#{counterBean.count()} occurrences found"
+				ajax="false" disabled="true" />
+			<br />
+			<br />
+			<ui:repeat value="#{counterBean.countList}" var="person">
+				<p:accordionPanel multiple="true" dynamic="true">
+					<p:tab title="#{person.nome} #{person.cognome}">
+						<h:panelGrid columns="2" cellpadding="1">
+							<h:outputText value="Id: #{person.id}" />
+							<br />
+							<h:outputText value="Data di Nascita: #{person.dataNascita}" />
+						</h:panelGrid>
+					</p:tab>
+				</p:accordionPanel>
+			</ui:repeat>
+		</h:form>
 	</div>
 
 	<div id="footer">

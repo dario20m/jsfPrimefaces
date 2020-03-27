@@ -3,31 +3,32 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-	
+
 	<!-- Define the JSF servlet (manages the request processing life cycle for 
 		JavaServer Faces) -->
 	<servlet>
-        <servlet-name>JSFServlet</servlet-name>
-        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+		<servlet-name>JSFServlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 	<!-- Map following files to the JSF servlet -->
-    <servlet-mapping>
-        <servlet-name>JSFServlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>JSFServlet</servlet-name>
-        <url-pattern>*.jsf</url-pattern>
-    </servlet-mapping>
-    
-    <listener>
+	<servlet-mapping>
+		<servlet-name>JSFServlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+
+	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-      
+
 	<welcome-file-list>
-		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>index.jsf</welcome-file>
 	</welcome-file-list>
-	 
+
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>vader</param-value>
+	</context-param>
 
 </web-app>

@@ -7,6 +7,7 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title><ui:insert name="title">Primefaces Button</ui:insert></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </h:head>
 
 <h:body>
@@ -20,7 +21,12 @@
 	<div id="content">
 		<ui:insert name="content">
 			<h:form>
-				<p:commandButton value="count Marios" ajax="false" action="#{counterBean.findMarios}" />
+				<h3>insert name to search:</h3>
+				<p:inputText id="input" value="#{counterBean.name}" />
+				<br />
+				<br />
+				<p:commandButton value="count occurrences" ajax="false"
+					actionListener="#{counterBean.findOccurrences}" action="count.jsf" />
 			</h:form>
 		</ui:insert>
 	</div>

@@ -9,6 +9,7 @@ import javax.faces.bean.ManagedProperty;
 public class CounterBean {
 
 	private List<Persona> countList;
+	private String name;
 	
 	@ManagedProperty(value = "#{personaService}")
 	private PersonaService personaService;
@@ -17,8 +18,8 @@ public class CounterBean {
 	
 	public CounterBean() {}
 
-	public boolean findMarios() {
-		countList = personaService.getByName("Mario");
+	public boolean findOccurrences() {
+		countList = personaService.getByName(name);
 		//console output
 		System.out.println(countList.toString());
 		return countList != null;
@@ -34,6 +35,14 @@ public class CounterBean {
 
 	public void setCountList(List<Persona> countList) {
 		this.countList = countList;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public PersonaService getPersonaService() {

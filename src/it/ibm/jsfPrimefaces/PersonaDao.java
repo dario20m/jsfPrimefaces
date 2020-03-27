@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class PersonaDao {
 
-	List<Persona> result = new ArrayList<>();
+	List<Persona> result;
 
 	public PersonaDao() {}
 
@@ -21,6 +21,8 @@ public class PersonaDao {
 		ResultSet rs = null;
 		Persona persona = null;
 		String nameLow = name;
+		
+		result = new ArrayList<>();
 
 		try {
 			if (name != null)
@@ -35,7 +37,8 @@ public class PersonaDao {
 
 			while (rs.next()) {
 				persona = new Persona(rs.getInt("id"), rs.getString("nome"), rs.getString("cognome"), rs.getDate("datanascita"));
-				result.add(persona);
+				if(!result.contains(persona))
+					result.add(persona);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
