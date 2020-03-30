@@ -8,7 +8,9 @@ We used:
 - Maven 3.8
 - Connector/J 8.0.19 
 
-This application use JSF ManagedBean annotation and classics Spring Context annotations for classes and properties binding, a mySQL connection defined in a local instance TOMCAT 8's context.xml (see below), Facelets files for the frontend with PrimeFaces components and Maven for the project (and dependencies) management.
+Program's logic is simple: it receives a string in input that will be used for a search by name on the local database.
+Values in return are stored in a list that will be shown in a second page after the occurrences counting.
+This application uses JSF ManagedBean annotation and classic Spring Context annotations for classes and properties binding, a mySQL connection defined in context.xml file defined in the local instance Tomcat 8 (see below), Facelets files for the frontend with PrimeFaces components and Maven for the project (and dependencies) management.
 
 It's fully replicable in your environment with a quick configuration of your tomcat resource:
 ```
