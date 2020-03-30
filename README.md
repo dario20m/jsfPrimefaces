@@ -17,7 +17,7 @@ It's fully replicable in your environment with a quick configuration of your tom
 ```
 <Resource name="jdbc/{schemaName}" auth="Container"
 		type="javax.sql.DataSource" driverClassName="com.mysql.cj.jdbc.Driver"
-		url="jdbc:mysql://localhost:{port}/{schemaName}?serverTimezone=UTC" maxTotal="15"
+		url="jdbc:mysql://localhost:{port}/{schemaName}?serverTimezone={timezone}" maxTotal="15"
 		username="{dbUserame}" password="{dbPassword}" maxIdle="3" />
 ```
 It works, but suggestions are very appreciated.
